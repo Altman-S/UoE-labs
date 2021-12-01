@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="CheckingAccount_none <= 0.5\nentropy = 0.881\nsamples = 1000\nvalue = [300, 700]\nclass = bad", fillcolor="#8ec7f0"] ;
+1 [label="Duration <= 22.5\nentropy = 0.981\nsamples = 606\nvalue = [254, 352]\nclass = bad", fillcolor="#c8e4f8"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="CreditHistory_ok_at_this_bank <= 0.5\nentropy = 0.917\nsamples = 349\nvalue = [116, 233]\nclass = bad", fillcolor="#9ccef2"] ;
+1 -> 2 ;
+3 [label="entropy = 0.892\nsamples = 330\nvalue = [102, 228]\nclass = bad", fillcolor="#92c9f1"] ;
+2 -> 3 ;
+4 [label="entropy = 0.831\nsamples = 19\nvalue = [14, 5]\nclass = good", fillcolor="#eeae80"] ;
+2 -> 4 ;
+5 [label="SavingsAccount_<100 <= 0.5\nentropy = 0.996\nsamples = 257\nvalue = [138, 119]\nclass = good", fillcolor="#fbeee4"] ;
+1 -> 5 ;
+6 [label="entropy = 0.959\nsamples = 89\nvalue = [34, 55]\nclass = bad", fillcolor="#b3daf5"] ;
+5 -> 6 ;
+7 [label="entropy = 0.959\nsamples = 168\nvalue = [104, 64]\nclass = good", fillcolor="#f5cfb3"] ;
+5 -> 7 ;
+8 [label="OtherPlans_none <= 0.5\nentropy = 0.52\nsamples = 394\nvalue = [46, 348]\nclass = bad", fillcolor="#53aae8"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="ResidentSince_2.0 <= 0.5\nentropy = 0.877\nsamples = 64\nvalue = [19, 45]\nclass = bad", fillcolor="#8dc6f0"] ;
+8 -> 9 ;
+10 [label="entropy = 0.7\nsamples = 37\nvalue = [7, 30]\nclass = bad", fillcolor="#67b4eb"] ;
+9 -> 10 ;
+11 [label="entropy = 0.991\nsamples = 27\nvalue = [12, 15]\nclass = bad", fillcolor="#d7ebfa"] ;
+9 -> 11 ;
+12 [label="CreditHistory_critical <= 0.5\nentropy = 0.409\nsamples = 330\nvalue = [27, 303]\nclass = bad", fillcolor="#4ba6e7"] ;
+8 -> 12 ;
+13 [label="entropy = 0.536\nsamples = 196\nvalue = [24, 172]\nclass = bad", fillcolor="#55abe9"] ;
+12 -> 13 ;
+14 [label="entropy = 0.155\nsamples = 134\nvalue = [3, 131]\nclass = bad", fillcolor="#3e9fe6"] ;
+12 -> 14 ;
+}
